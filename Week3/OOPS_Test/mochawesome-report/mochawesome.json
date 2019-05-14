@@ -1,0 +1,282 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-05-10T12:16:35.258Z",
+    "end": "2019-05-10T12:16:35.314Z",
+    "duration": 56,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "f8ef74a6-646d-4c78-ae88-70687f6c7d62",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "450ca26e-8012-4b78-8787-739884be44a3",
+        "title": "BDD TEST",
+        "fullFile": "/home/user/Desktop/mochatest/OOPS_Programs_JS/OOPS_Test/inventoryDataTest.js",
+        "file": "/inventoryDataTest.js",
+        "beforeHooks": [
+          {
+            "title": "\"before all\" hook",
+            "fullTitle": "BDD TEST \"before all\" hook",
+            "timedOut": false,
+            "duration": 2,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "console.log(\"Require JSON file for this test\")",
+            "err": {},
+            "isRoot": false,
+            "uuid": "e04a4d4f-8176-41f9-a584-a05d6561b63b",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after all\" hook",
+            "fullTitle": "BDD TEST \"after all\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "console.log(\"BDD test for inventory data end\")",
+            "err": {},
+            "isRoot": false,
+            "uuid": "0d05bc90-ad73-42e3-9886-b58936d9b83f",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "c63ad21d-6a70-464a-bb51-6891a689e1f0",
+            "title": "Test for checking choice that pass to switch case",
+            "fullFile": "/home/user/Desktop/mochatest/OOPS_Programs_JS/OOPS_Test/inventoryDataTest.js",
+            "file": "/inventoryDataTest.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "Entered choice should not greater than 3",
+                "fullTitle": "BDD TEST Test for checking choice that pass to switch case Entered choice should not greater than 3",
+                "timedOut": false,
+                "duration": 1,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "/*\n* choices is for rice,wheat and pulses not more than that\n*/\n\nassert.isTrue(choice[0]<=3)",
+                "err": {},
+                "isRoot": false,
+                "uuid": "94ca5203-4128-485a-97cf-5591d6d1dd29",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "94ca5203-4128-485a-97cf-5591d6d1dd29"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "edf0929c-3c49-41ab-bbf0-4db5917a3f5f",
+            "title": "Test for checking display function gives right output or not",
+            "fullFile": "/home/user/Desktop/mochatest/OOPS_Programs_JS/OOPS_Test/inventoryDataTest.js",
+            "file": "/inventoryDataTest.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "Output should true",
+                "fullTitle": "BDD TEST Test for checking display function gives right output or not Output should true",
+                "timedOut": false,
+                "duration": 1,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "/*\n* choices is for rice,wheat and pulses not more than that\n*/\nvar jsonData=choice[1]\n\nvar displayData=choice[2]\nassert.equal(jsonData,displayData)",
+                "err": {},
+                "isRoot": false,
+                "uuid": "3b32d793-566d-49e7-8bc2-310879e7dfd5",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "3b32d793-566d-49e7-8bc2-310879e7dfd5"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 1,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "7eb5ab76-ae4d-421f-aea2-28cfd70a5ea9",
+            "title": "Test for checking Entered weight type",
+            "fullFile": "/home/user/Desktop/mochatest/OOPS_Programs_JS/OOPS_Test/inventoryDataTest.js",
+            "file": "/inventoryDataTest.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "Weight should be integer",
+                "fullTitle": "BDD TEST Test for checking Entered weight type Weight should be integer",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "assert.equal(choice[3],1)",
+                "err": {},
+                "isRoot": false,
+                "uuid": "13bd8c52-458a-4d86-a784-b133c7929f30",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "13bd8c52-458a-4d86-a784-b133c7929f30"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "b8c289ad-7a17-4fff-b8ae-3f2e4883116d",
+            "title": "Test for checking Entered weight value",
+            "fullFile": "/home/user/Desktop/mochatest/OOPS_Programs_JS/OOPS_Test/inventoryDataTest.js",
+            "file": "/inventoryDataTest.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "Weight should be greater than 0",
+                "fullTitle": "BDD TEST Test for checking Entered weight value Weight should be greater than 0",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "assert.isTrue(choice[3]>0)",
+                "err": {},
+                "isRoot": false,
+                "uuid": "957d907f-2505-495f-b55c-b6f2e2e6e50c",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "957d907f-2505-495f-b55c-b6f2e2e6e50c"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          },
+          {
+            "uuid": "ba75ccbd-05f6-4da2-ba3f-6a9938a7bbdf",
+            "title": "Test for json file is found or not",
+            "fullFile": "/home/user/Desktop/mochatest/OOPS_Programs_JS/OOPS_Test/inventoryDataTest.js",
+            "file": "/inventoryDataTest.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "Json file not found",
+                "fullTitle": "BDD TEST Test for json file is found or not Json file not found",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "assert.isTrue(choice[1]!=null)",
+                "err": {},
+                "isRoot": false,
+                "uuid": "610ec534-6ac5-42e4-a2a0-55b7d11d3509",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "610ec534-6ac5-42e4-a2a0-55b7d11d3509"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 2000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
