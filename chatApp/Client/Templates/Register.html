@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html ng-app="Client">
+
+<head>
+        <link href="/home/user/ChatApp/Client/CSS/Register.css" type="text/css" rel="stylesheet"  >
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    
+   
+</head>
+<center >
+<body ng-controller="controlRegister" >
+    <div class=div1>
+        <div>
+            <h1>Registration Form</h1>
+        
+                <div style="margin-top:60px">
+                    <form name="Register" method="POST">
+                        <p>firstName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="name" name="myInput" ng-model="firstName">
+                    <!-- </form> -->
+                </div>
+                <div style="margin-top:20px">
+                        <!-- <form name="myForm"> -->
+                            <p>lastName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txtLastName" ng-model="lastName">
+                        <!-- </form> -->
+                </div>
+                
+               
+                <div style="margin-top:20px;margin-left:15px;">
+                        <!-- <form name="myForm"> -->
+                            <p>email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="txtemail" ng-model="email">
+                        <!-- </form> -->
+                </div>
+                <div style="margin-top:20px;">
+                        <!-- <form name="myForm"> -->
+                            <p>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" ng-model="password">
+                        <!-- </form> -->
+                </div>
+                <div >
+                        <!-- <button class="btn" ng-click = register() onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-right:20px;background-color: green">Register</button>
+                        <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-left:20px;background-color:red">Cancel</button> -->
+                <button class="btn" ng-click = register()></button>
+                
+                    </div>
+            </form>
+            </div>  
+            <br>   
+            <p><h3>SIGN IN AFTER REGISTRATION</h3></p>
+            <a ui-sref="login">SIGN IN</a>
+
+</body>
+</center>
+</html>

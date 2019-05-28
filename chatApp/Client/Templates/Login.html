@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="Client">
+
+<head>
+    <!-- <link href="/home/user/ChatApp/Client/CSS/style.css" type="text/css" rel="stylesheet"  > -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   
+            
+</head>
+<center >
+<body ng-controller="controlLogin" >
+    
+    
+    <div class="div1">
+            <!-- <img src="/home/user/ChatApp/Client/Assets/login.png" height="70px" width="70px"> -->
+        <h1>LOG IN</h1>
+
+        <div style="margin-top:60px">
+            <form name="myForm">
+                <p>email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="myInput" ng-model="email">
+            </form>
+        </div>
+        <div style="margin-top:20px">
+            
+            <form name="myForm">
+                <p>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="PassWord" ng-model="password">
+                    
+            </form>
+        </div>
+        <div >
+        <!-- <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+        <button class="btn" ng-click = login()>Login</button>
+    </div><br>
+    <br>
+        <div style="margin-top:20px; float: left;" >
+            <a ui-sref="forgotPassword">Forgot Password?</a>
+        </div>
+        <div style="margin-top:20px;float: right;">
+            <a ui-sref="Register">Create Account!</a>
+        </div>
+        
+
+
+    </div>
+</body>
+</center>
+
+
+</html>
