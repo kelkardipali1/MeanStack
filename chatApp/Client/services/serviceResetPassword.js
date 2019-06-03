@@ -1,13 +1,19 @@
+/******************************************************************************
+ *  @Purpose        : for providing service to resetpassword
+ *  @file           : serviceResetPassword.js      
+ *  @author         : Dipali kelkar
+ *  @version        : 1.33.1-1554971066
+ ******************************************************************************/
 app.service('serviceResetPassword',function($http,$location){
     this.resetPassword=function(data,$scope){
-       console.log("data on service register AAAAAAAAAAAAA",$location.$$absUrl);
-       var str=$location.$$absUrl;
-       var token=str.slice(39,str.length)
        console.log("token in service",token)
+       /**
+        * @description:The AngularJS $http service makes a request to the server, and returns a response.
+        */
       
         $http({
             method:'POST',
-            url:'http://localhost:3000/resetPassword/'+token,
+            url:'http://localhost:3000/resetPassword/:token',
             data:data
         }).then(
             function successCallback(response){

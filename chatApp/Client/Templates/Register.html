@@ -1,3 +1,8 @@
+<!--<@purpose:To create Register page 
+    <@file:Register.html
+    <@author:Dipali Kelkar
+    <@version:1.33.1-1554971066
+-->
 <!DOCTYPE html> 
 <html ng-app="Client">
 
@@ -15,26 +20,35 @@
         
                 <div style="margin-top:60px">
                     <form name="Register" method="POST">
-                        <p>firstName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="name" name="myInput" ng-model="firstName">
-                    <!-- </form> -->
-                </div>
+                        <p>firstName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="name" name="myInput" ng-model="firstName"required>
+                            <br>
+                            <span ng-show="Register.myInput.$touched && Register.myInput.$invalid">The firstName is required.</span></p>
+                            </form>
                 <div style="margin-top:20px">
-                        <!-- <form name="myForm"> -->
-                            <p>lastName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txtLastName" ng-model="lastName">
-                        <!-- </form> -->
-                </div>
+
+                    <form name="Register">
+                            <p>lastName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txtLastName" name="myInput" ng-model="lastName"required>
+                               <br>
+                                <span ng-show="Register.myInput.$touched && Register.myInput.$invalid">The lastname is required.</span></p>
+                            </form>
+                            </div>
                 
                
                 <div style="margin-top:20px;margin-left:15px;">
-                        <!-- <form name="myForm"> -->
-                            <p>email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="txtemail" ng-model="email">
-                        <!-- </form> -->
-                </div>
+                    <form name="Register">
+                            <p>email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" id="txtemail" name="myInput" ng-model="email" required>
+                           <br>   
+                         <span ng-show="Register.myInput.$touched && Register.myInput.$invalid">The email is required.</span></p>
+                        </form> 
+                        </div>
                 <div style="margin-top:20px;">
-                        <!-- <form name="myForm"> -->
-                            <p>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" ng-model="password">
-                        <!-- </form> -->
-                </div>
+                    <form name="Register">
+                            <p>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" ng-model="password" required>
+                               <br>
+                                <span ng-show="Register.password.$touched && Register.password.$invalid">The password is required.</span></p>
+                    
+                            </form>
+                            </div>
                 <div >
                         <!-- <button class="btn" ng-click = register() onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-right:20px;background-color: green">Register</button>
                         <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto; margin-left:20px;background-color:red">Cancel</button> -->

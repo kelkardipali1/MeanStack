@@ -15,14 +15,17 @@ let saltRounds = 10;
 const UserSchema = mongoose.Schema({
     firstName: {
         type: String,
+        minimum: 3,
         require: [true, "firstname require"]
     },
     lastName: {
         type: String,
+        minimum: 3,
         require: [true, "lastname require"]
     },
     email: {
         type: String,
+        pattern: "^.+\@.+$",
         require: [true, "email require"]
     },
     password: {
@@ -32,8 +35,8 @@ const UserSchema = mongoose.Schema({
     // title:String,
     // content:String,
 }, {
-    timestamps: true
-});
+        timestamps: true
+    });
 var user = mongoose.model('User', UserSchema);
 function userModel() { }
 function hash(password) {
@@ -41,24 +44,24 @@ function hash(password) {
     return hash;
 }
 /**
- * Saving data into database using the user schema
+ * Saving data into database using the usehttps://localhost/#!/registerchema
  **/
 userModel.prototype.registration = (body, callback) => {
-//console.log("model",body.body);
-    user.find({"email": body.email}, (err, data) => {
+    //console.log("model",body.body);
+    user.find({ "email": body.email }, (err, data) => {
         //console.log("data" + dataresetPassword);
         if (err) {
             console.log("Error in registration");
             callback(err);
         }
-         else if (data.length>0) {
+        else if (data.length > 0) {
             console.log("data" + data);
 
             console.log("Email already exists ");
             callback("User already Present...........");
 
         }
-         else {
+        else {
             const newUser = new user({
                 "firstName": body.firstName,
                 "lastName": body.lastName,
@@ -76,13 +79,16 @@ userModel.prototype.registration = (body, callback) => {
                     callback(null, result);
                 }
 
+
             })
         }
     });
 }
 userModel.prototype.Login = (body, callback) => {
     //console.log("model ", body.password);
-    user.findOne({ "email": body.email}, (err, result) => {
+    user.findOne({ "email": body.email }, (err, result) => {
+
+        console.log(result)
         if (err) {
             callback(err);
         }
@@ -90,7 +96,7 @@ userModel.prototype.Login = (body, callback) => {
             bcrypt.compare(body.password, result.password).then(function (res) {
                 if (res) {
                     console.log("Login Succesfully");
-                    callback(null, res);
+                    callback(null, result);
                 } else {
                     console.log("Incorrect password");
                     callback("Incorrect password");
@@ -102,27 +108,27 @@ userModel.prototype.Login = (body, callback) => {
         }
     });
 }
-userModel.prototype.forgotPassword=(body,callback)=>
-user.find({'email':body.email},(err,data)=>{
-    if(err){
-        return callback(err)
-    }else if(data){
-        console.log(data)
-        return callback(null,data)
-    }else
-    console.log("invalid email and user");
-})
-userModel.prototype.resetPassword=(req,callback)=>{
-    let newpassword=hash(req.body.password)
-    console.log("module block"+req)
+userModel.prototype.forgotPassword = (body, callback) =>
+    user.find({ 'email': body.email }, (err, data) => {
+        if (err) {
+            return callback(err)
+        } else if (data) {
+            console.log(data)
+            return callback(null, data)
+        } else
+            console.log("invalid email and user");
+    })
+userModel.prototype.resetPassword = (req, callback) => {
+    let newpassword = hash(req.body.password)
+   // console.log("module block" , req)
     console.log(req.body.password)
-    console.log(JSON.stringify(req.decoded))
-    user.updateOne({'_id':req.decoded.payload.user_id},{'password':newpassword},(err,data)=>{
-        if(err){
+    console.log(req.decoded.payload._id)
+    user.updateOne({ '_id': req.decoded.payload._id }, { 'password': newpassword }, (err, data) => {
+        if (err) {
             console.log("error")
             return callback(err)
-        }else{
-            return callback(null,data)
+        } else {
+            return callback(null, data)
         }
     })
 

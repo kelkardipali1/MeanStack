@@ -1,8 +1,13 @@
+<!--<@purpose:To create login page
+    <@file:Login.html
+    <@author:Dipali Kelkar
+    <@version:1.33.1-1554971066
+-->
 <!DOCTYPE html>
 <html ng-app="Client">
 
 <head>
-    <!-- <link href="/home/user/ChatApp/Client/CSS/style.css" type="text/css" rel="stylesheet"  > -->
+    <link href="/home/user/ChatApp/Client/CSS/style.css" type="text/css" rel="stylesheet"> 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
    
             
@@ -12,30 +17,36 @@
     
     
     <div class="div1">
-            <!-- <img src="/home/user/ChatApp/Client/Assets/login.png" height="70px" width="70px"> -->
+        <img src="../Assets/loginicon.png" height="70px" width="70px"> 
         <h1>LOG IN</h1>
 
-        <div style="margin-top:60px">
+        <div style="margin-top:40px">
             <form name="myForm">
-                <p>email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="myInput" ng-model="email">
-            </form>
+                <p><lable class="lblemail">email</lable><input type="email" name="myInput" class=
+                    "form-control inputemail" ng-model="email" required>
+                    <br>
+         <span ng-show="myForm.myInput.$touched && myForm.myInput.$invalid">The email is required.</span>
+         </p>
+          
         </div>
         <div style="margin-top:20px">
             
-            <form name="myForm">
-                <p>password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="PassWord" ng-model="password">
-                    
+            
+                <p><lable class="lblpassword">password</lable><input type="password" name="PassWord" class="form-control inputpassword" ng-model="password">
+                   <br>
+                    <span ng-show="myForm.PassWord.$touched && myForm.PassWord.$invalid">The password is required.</span>   
+                    </p> 
             </form>
         </div>
         <div >
         <!-- <button class="btn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
-        <button class="btn" ng-click = login()>Login</button>
+        <button class="btn"   type="submit" value="log In" ng-click="login()" style="margin-left:-30px;">Login</button>
     </div><br>
     <br>
-        <div style="margin-top:20px; float: left;" >
+        <div style="margin-top:-20px; float: left;" >
             <a ui-sref="forgotPassword">Forgot Password?</a>
         </div>
-        <div style="margin-top:20px;float: right;">
+        <div style="margin-top:-20px;float: right;">
             <a ui-sref="Register">Create Account!</a>
         </div>
         

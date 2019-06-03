@@ -1,20 +1,44 @@
-.div1{width: 500px;
-    height: 500px;
+/******************************************************************************
+ *  @Purpose        : applying styling to login
+ *  @file           : style.css       
+ *  @author         : Dipali kelkar
+ *  @version        : 1.33.1-1554971066
+ ******************************************************************************/
+.div1{
+    width: 1100px; 
+    height: 1300px;
     padding: 10px;
-    
     border: 2px solid grey;
-   margin-top:50px;
+    margin-top:50px;
     box-sizing: border-box;
     box-align: center;}
     .btn{
         padding:10px;
-        border:1px solid  blue;
         border-radius: 20px;
-        margin-left: 100px;
+        margin-left: -600px;
         padding-left: 20px;
         padding-right: 20px;
+        background-color: blue;
         
     }
     a{
+        margin-top:-50px;
         text-decoration: none;
+    }
+    input{
+        margin-left: 10px;
+        padding:8px;
+        border-radius: 10px;
+    }
+    .lblemail{
+        margin-left: -25px;
+    }
+    .lblpassword{
+        margin-left: -30px;
+    }
+    .inputemail{
+        margin-left:50px;
+    }
+    .inputpassword{
+        margin-left:30px;
     }

@@ -15,48 +15,72 @@ const mongoose = require('mongoose');
 var chatSchema = new mongoose.Schema({
     senderId: {
         type: String,
+        pattern: "^.+\@.+$",
+        unique:true,
+        require: [true, "firstname require"]
+
+    },
+    senderName:{
+        type:String,
+        minimum: 3
         
     },
-    recieverId: {
+    receiverId: {
         type: String,
-        
+        pattern: "^.+\@.+$",
+        unique:true
+
+    },
+    receiverName:{
+        type:String,
+        minimum: 3
+
+
     },
     message: {
         type: String,
-       
+
     }
 }, {
         timestamps: true
     });
-    function chatModel() { }
+function chatModel() { }
 var chat = mongoose.model('chat', chatSchema);
 /**
  * store messages into the database
  */
 chatModel.prototype.addMessage = (chatData, callback) => {
-    console.log('chatData model-->', chatData.body);
-    var newMsg = new chat({
-        senderId: chatData.senderId,
-        recieverId: chatData.recieverId,
-        message: chatData.message
-    })
-    console.log(newMsg)
-    newMsg.save((err,result) => {
-        console.log("model result",result)
-        if (err) {
-            console.log("message saved error");
-            return callback(err);
-        } else {
-            console.log("message saved successfully ");
-            return callback(null, result);
-        }
-    });
+    try {
+        console.log('chatData model-->', chatData.senderId);
+        var newMsg = new chat({
+            senderId: chatData.senderId,
+            senderName:chatData.senderName,
+            receiverId: chatData.receiverId,
+            receiverName: chatData.receiverName,
+            message: chatData.message
+        })
+        console.log(newMsg)
+        newMsg.save((err, result) => {
+            console.log("model result", result)
+            if (err) {
+                console.log("message saved error");
+                return callback(err);
+            } else {
+                console.log("message saved successfully ");
+                return callback(null, result);
+            }
+        });
+    }
+    catch (err) {
+        callback(err);
+    }
 }
-/**
+/*
  **get all users chats
 */
 
 chatModel.prototype.getAllUserChats = (callback) => {
+    try{
     chat.find({}, (err, result) => {
         if (err) {
             callback(err);
@@ -64,5 +88,9 @@ chatModel.prototype.getAllUserChats = (callback) => {
             callback(null, result);
         }
     });
+}
+catch(err){
+    callback(err);
+}
 }
 module.exports = new chatModel();

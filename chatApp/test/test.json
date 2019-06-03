@@ -1,0 +1,30 @@
+
+{
+    "registration": {
+        "firstName": "Dipali",
+        "lastName": "Kelkar",
+        "email": "kelkardipali1@gmail.com",
+        "password": "dipali@1234"
+    },
+    "login":{
+        "email":"kelkardipali1@gmail.com",
+        "password":"dipali@1234"
+
+    },
+    "forgotPassword":{
+        "email":"kelkardipali1@gmail.com"
+
+    },
+    "verifyUser":{
+        "email":"kelkardipali1@gmail.com"
+
+    },
+    "resetPassword":{
+        "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbGthcmRpcGFsaTFAZ21haWwuY29tIiwiaWQiOiJkYXRhWzBdLl9pZCIsImlhdCI6MTU1OTM5MTc2NCwiZXhwIjoxNjQ5MzkxNzY0fQ.WfqYWmOqBaAZtDfMRzlhbGVNn2NjWzyvAd7YSoHG1pU",
+        "password":"dipali@123"
+    }
+
+
+    
+
+}
